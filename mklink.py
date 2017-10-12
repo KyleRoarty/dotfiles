@@ -39,7 +39,12 @@ def mkLinks(file_path):
             print "%s does not exist. Creating link with %s" %(d_path, s_path)
             os.symlink(s_path, d_path)
         elif os.path.islink(d_path):
-            print "Link already exists."
+            if os.path.realpath(d_path) == s_path:
+                print "Link already exists."
+            else:
+                print "%s symlinked to file that isn't %s. Re-linking %s." %(d_path, s_path, d_path)
+                os.unlink(d_path)
+                os.symlink(s_path, d_path)
 
     f.close()
 
