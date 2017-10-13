@@ -44,5 +44,3 @@ set title
 "======[ Highlight column 80 ]==========
 set cc=80
 hi ColorColumn ctermbg=235
-
-colorscheme slate
