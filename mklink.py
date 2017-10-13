@@ -26,26 +26,27 @@ def mkLinks(file_path):
 
     for line in neLines(f):
         src_dst = line.split(',')
-        s_path = absPath(curr_dir, src_dst[0])
+        s_path = absPath(curr_dir, 'configs', src_dst[0])
         d_path = absPath(src_dst[1], '.'+src_dst[0])
 
         if not os.path.isfile(s_path):
             print "%s does not exist. Oops..." %(s_path)
-        elif os.path.isfile(d_path) and not os.path.islink(d_path):
-            print "%s exists, but is not a link. Deleting and creating link." %(d_path)
-            os.remove(d_path)
-            os.symlink(s_path, d_path)
+        elif os.path.isfile(d_path):
+            if not os.path.islink(d_path):	
+                print "%s exists, but is not a link. Deleting and creating link." %(d_path)
+                os.remove(d_path)
+                os.symlink(s_path, d_path)
+	    elif os.path.islink(d_path):
+		if os.path.realpath(d_path) == s_path:
+                    print "Link already exists."
+                else:
+                    print "%s symlinked to file that isn't %s. Re-linking %s." %(d_path, s_path, d_path)
+                    os.unlink(d_path)
+                    os.symlink(s_path, d_path)
         elif not os.path.isfile(d_path):
             print "%s does not exist. Creating link with %s" %(d_path, s_path)
             os.symlink(s_path, d_path)
-        elif os.path.islink(d_path):
-            if os.path.realpath(d_path) == s_path:
-                print "Link already exists."
-            else:
-                print "%s symlinked to file that isn't %s. Re-linking %s." %(d_path, s_path, d_path)
-                os.unlink(d_path)
-                os.symlink(s_path, d_path)
-
+          
     f.close()
 
 def parseArgs():
