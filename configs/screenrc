@@ -1,0 +1,5 @@
+# Run this command if screen doesn't run:
+# sudo /etc/init.d/screen-cleanup start
+
+startup_message off
+term xterm-256color

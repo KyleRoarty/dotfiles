@@ -44,3 +44,5 @@ set title
 "======[ Highlight column 80 ]==========
 set cc=80
 hi ColorColumn ctermbg=235
+
+set background=dark
