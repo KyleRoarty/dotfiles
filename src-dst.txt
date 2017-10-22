@@ -1,3 +1,4 @@
 vimrc,~/,.
 gitconfig,~/,.
 screenrc,~/,.
+bashrc,~/,.
