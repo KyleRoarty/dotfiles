@@ -39,7 +39,6 @@ def mkLinks(file_path):
         except OSError as e:
             if e.errno != errno.EEXIST:
                 raise
-            print "Path already exists."
 
         if os.path.islink(d_path):
             if os.path.realpath(d_path) == s_path:
