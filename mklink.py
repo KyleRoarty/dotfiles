@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os
+import os, errno
 from argparse import ArgumentParser
 
 FILE = 0
@@ -32,6 +32,14 @@ def mkLinks(file_path):
         src_dst = line.split(',')
         s_path = absPath(curr_dir, 'configs', src_dst[FILE])
         d_path = absPath(src_dst[LOC], src_dst[DOT]+src_dst[FILE])
+
+        try:
+            os.makedirs(src_dst[LOC])
+            print "Making path %s." %(src_dst[LOC])
+        except OSError as e:
+            if e.errno != errno.EEXIST:
+                raise
+            print "Path already exists."
 
         if os.path.islink(d_path):
             if os.path.realpath(d_path) == s_path:
