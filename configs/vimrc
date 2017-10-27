@@ -46,3 +46,8 @@ set cc=80
 hi ColorColumn ctermbg=235
 
 set background=dark
+
+"=====[ Octave syntax ]=====
+augroup filetypedetect
+	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+augroup END

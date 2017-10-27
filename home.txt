@@ -2,3 +2,4 @@ vimrc,~/,.
 gitconfig,~/,.
 screenrc,~/,.
 bashrc,~/,.
+octave.vim,~/.vim/syntax/,
