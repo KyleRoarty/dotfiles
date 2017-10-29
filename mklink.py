@@ -34,8 +34,8 @@ def mkLinks(file_path):
         d_path = absPath(src_dst[LOC], src_dst[DOT]+src_dst[FILE])
 
         try:
-            os.makedirs(src_dst[LOC])
-            print "Making path %s." %(src_dst[LOC])
+            os.makedirs(absPath(src_dst[LOC]))
+            print "Making path %s." %(absPath(src_dst[LOC]))
         except OSError as e:
             if e.errno != errno.EEXIST:
                 raise

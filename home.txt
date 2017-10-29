@@ -3,3 +3,4 @@ gitconfig,~/,.
 screenrc,~/,.
 bashrc,~/,.
 octave.vim,~/.vim/syntax/,
+Linux.colorscheme,/usr/share/konsole/,
