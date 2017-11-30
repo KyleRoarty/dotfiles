@@ -627,7 +627,7 @@ syn match octaveRelationalOperator  "[<>]=\?"
 
 " User Variables
 " Uncomment this syntax group and "Hilink octaveIdentifier" below to highlight
-"syn match octaveIdentifier  "\<\h\w*\>"
+syn match octaveIdentifier  "\<\h\w*\>"
 
 " Strings
 syn region octaveString  start=/'/  end=/'/  skip=/''/ contains=octaveLineContinuation,@Spell
@@ -716,7 +716,7 @@ if version >= 508 || !exists("did_octave_syntax_inits")
   HiLink octaveLogicalOperator          octaveOperator
 
 " Optional highlighting
-"  HiLink octaveOperator                Operator
+  HiLink octaveOperator                Operator
 "  HiLink octaveIdentifier              Identifier
 "  HiLink octaveTab                     Error
 
