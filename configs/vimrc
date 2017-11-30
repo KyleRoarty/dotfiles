@@ -51,3 +51,7 @@ set background=dark
 augroup filetypedetect
 	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
 augroup END
+
+"=====[ Template files ]=====
+"==[ Project Euler python ]==
+nnoremap <Leader>et :0r ~/.vim/templates/euler.py<CR>
