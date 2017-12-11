@@ -52,6 +52,9 @@ augroup filetypedetect
 	au! BufRead,BufNewFile *.m,*.oct set filetype=octave
 augroup END
 
-"=====[ Template files ]=====
-"==[ Project Euler python ]==
+"=====[ Template files ]=======
+"==[ Project Euler python   ]==
 nnoremap <Leader>et :0r ~/.vim/templates/euler.py<CR>
+
+"==[ Basic Assembly         ]==
+nnoremap <Leader>ba :0r ~/.vim/templates/asm.s<CR>
