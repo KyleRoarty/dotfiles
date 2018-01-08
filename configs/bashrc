@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-LS_COLORS='ow=01;35'
+LS_COLORS='ow=01;35:di=01;35:'
 export LS_COLORS
 
 alias msw="sudo /etc/init.d/screen-cleanup start"
