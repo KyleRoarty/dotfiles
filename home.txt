@@ -4,3 +4,5 @@ screenrc,~/,.
 bashrc,~/,.
 octave.vim,~/.vim/syntax/,
 Linux.colorscheme,/usr/share/konsole/,
+templates/euler.py,~/.vim,
+templates/asm.s,~/.vim,
