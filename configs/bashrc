@@ -120,3 +120,9 @@ LS_COLORS='ow=01;35:di=01;35:'
 export LS_COLORS
 
 alias msw="sudo /etc/init.d/screen-cleanup start"
+
+export ROCM_PATH=/opt/rocm
+export HCC_HOME=$ROCM_PATH/hcc
+export HSA_PATH=$ROCM_PATH/hsa
+export HIP_PLATFORM=hcc
+export PATH=/opt/rocm/bin:$PATH
