@@ -129,5 +129,6 @@ export PATH=/opt/rocm/bin:$PATH
 
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 export PATH=$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin
+export PATH=$PATH:/mnt/c/Program\ Files/Docker\ Toolbox/
 alias docker=docker.exe
 alias docker-compose=docker-compose.exe
