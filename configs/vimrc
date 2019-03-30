@@ -15,7 +15,15 @@ function TabToggle()
 		set smarttab
 	endif
 endfunction
+
+function CopyToggle()
+	set number!
+	set relativenumber!
+	set list!
+endfunction
+
 nmap <F2> mz:execute TabToggle()<CR>'z
+nnoremap <Leader>tp mz:execute CopyToggle()<CR>'z
 
 set hlsearch
 "=====[ Whitespace ]================
